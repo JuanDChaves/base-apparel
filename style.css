@@ -30,9 +30,8 @@ body {
     margin: 0;
 }
 
-.content img {
-    position: relative;
-    top: -80px;
+.logo {
+    margin-bottom: 70px;
 }
 
 .title {
@@ -46,7 +45,7 @@ body {
     font-size: 2em;
     letter-spacing: 20px;
     margin-bottom: 15px;
-    line-height: 80px;
+    line-height: 70px;
 }
 
 .title .dark-title {
@@ -55,7 +54,7 @@ body {
     font-size: 2em;
     letter-spacing: 20px;
     margin: 50px 0;
-    line-height: 80px;
+    line-height: 70px;
 }
 
 .greeting {
@@ -65,20 +64,64 @@ body {
     margin: 25px 0;
 }
 
+.input-field {
+    width: 100%;
+    position: relative;
+}
+
 input {
     background-color: transparent;
     border: var(--red) solid 0.5px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 50px;
     font-family: inherit;
+    color: var(--red);
+    width: 100%;
+    cursor: pointer;
+    outline: 0;
+}
+
+input:focus {
+    color: black;
+    font-size: 20px;
+    padding: 16.7px 30px;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+input.error {
+    border: hsl(0, 93%, 68%) solid 2px;
+}
+
+::placeholder {
     color: var(--red);
 }
 
 button {
+    position: absolute;
+    right: 0px;
     border: none;
     background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
     border-radius: 50px;
-    padding: 10px 15px;
+    padding: 15.2px 45px;
+    box-shadow: 0 15px 10px rgba(253, 216, 216, 0.7);
+}
+
+button:hover {
+    background-image: linear-gradient(135deg, hsl(0, 90%, 92%), hsl(0, 90%, 80%));
+    cursor: pointer;
+    box-shadow: 0 15px 10px rgba(253, 216, 216, 0.9);
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer p {
+    opacity: 0.4;
 }
 
 
