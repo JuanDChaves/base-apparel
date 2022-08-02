@@ -26,8 +26,17 @@ body {
   flex-direction: column;
   align-items: baseline;
   justify-content: center;
-  padding: 50px 160px 50px 160px;
+  padding: 50px 160px;
   margin: 0;
+}
+
+.hero-desktop {
+  max-width: 50vw;
+  height: auto;
+}
+
+.mobile-image {
+  display: none;
 }
 
 .logo {
@@ -90,9 +99,13 @@ input.error {
   border: hsl(0, 93%, 68%) solid 2px;
 }
 
-input.error:focus {
+input:focus {
   color: black;
   font-size: 20px;
+  padding: 17px;
+}
+
+input.error:focus {
   padding: 15px;
 }
 
@@ -131,6 +144,10 @@ button:hover {
   box-shadow: 0 15px 10px rgba(253, 216, 216, 0.9);
 }
 
+.icon {
+  content: url("./images/icon-arrow.svg");
+}
+
 footer {
   margin-top: 80px;
   text-align: center;
@@ -140,8 +157,34 @@ footer p {
   opacity: 0.4;
 }
 
-/* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
-- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+@media (max-width: 1250px) {
+  .content {
+    padding: 25px 50px;
+  }
+
+  footer {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  body {
+    flex-direction: column;
+  }
+
+  .hero-desktop {
+    display: none;
+  }
+
+  .mobile-image {
+    display: block;
+    align-self: center;
+    margin-bottom: 20px;
+  }
+
+  .content {
+    text-align: center;
+  }
+}
 
 /* - Mobile: 375px
-- Desktop: 1440px */
